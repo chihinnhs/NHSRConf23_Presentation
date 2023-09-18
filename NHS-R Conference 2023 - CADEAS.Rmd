@@ -1,0 +1,31 @@
+---
+title: "R dashboard design for a varied customer base" 
+subtitle: "NHS-R Community Conference 2023"
+author: "Cancer Alliance Data Evaluation and Analysis Service (CADEAS)"
+date: "`r Sys.Date()`"
+output: 
+  ioslides_presentation:
+    logo: "./NHS_logo/NHS 10mm - RGB Blue.jpg"
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+## Intro
+  - About CADEAS: - what we do, who our stakeholders are, what kind of products we make
+
+## The challenges
+  - to make a product that meets the needs of a wide range of stakeholders. 
+  - Something particularly technical?? [we don’t have to do this but if Chi has an example of something we can put it in here- scatterplots??]
+
+## The solution
+  - Tips on how to cater to a wide range of audiences e.g. graphs and data, very clear tips, extract in multiple formats
+  - Work around for the technical challenge if included
+  
+## Conclusion
+  - Summarise what we’ve said 
+  - Questions
+
+
+
