@@ -5,6 +5,7 @@ author: "Cancer Alliance Data Evaluation and Analysis Service (CADEAS)"
 date: "`r Sys.Date()`"
 output: 
   ioslides_presentation:
+    widescreen: true
     logo: "./NHS_logo/NHSE.jpg"
     css: style.css
 ---

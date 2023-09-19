@@ -2,10 +2,11 @@
   width: 108px !important;
   height: 81px !important;
 }
+
 slides > slide:not(.nobackground):before {
-  width: 54px;
-  height: 40.5px;
-  background-size: 54px 40.5px;
+  width: 72px;
+  height: 54px;
+  background-size: 72px 54px;
   left: initial;
   right: 0;
   top: 50;
