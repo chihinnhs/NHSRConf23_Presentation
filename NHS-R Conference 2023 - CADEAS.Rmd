@@ -1,11 +1,11 @@
 ---
-title: "R dashboard design for a varied customer base" 
+title: "Dashboard Design for a Varied Customer Base" 
 subtitle: "NHS-R Community Conference 2023"
 author: "Cancer Alliance Data Evaluation and Analysis Service (CADEAS)"
 date: "`r Sys.Date()`"
 output: 
   ioslides_presentation:
-    logo: "./NHS_logo/NHS 10mm - RGB Blue.jpg"
+    logo: "./NHS_logo/NHSE.jpg"
     css: style.css
 ---
 
