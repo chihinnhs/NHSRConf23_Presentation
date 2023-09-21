@@ -13,9 +13,23 @@ slides > slide:not(.nobackground):before {
   bottom: initial;
 }
 
+h1 {
+  color: #231f20 !important;
+}
+
 h2 {  
   color: #005EB8 !important;
 }
+
+li {
+  color: #231f20 !important;
+}
+
+p {
+  color: #231f20 !important;
+}
+
+
 slides > slide {
   font-family: Arial, Arial, Arial;
 }

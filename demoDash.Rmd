@@ -1,0 +1,68 @@
+---
+title: "Shinny-less Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    logo: "./NHS_logo/NHS 10mm - RGB Blue.jpg"
+    theme:
+      version: 4
+      bg: "#FFFFFF"
+      fg: "#212b32"
+      primary: "#005EB8"
+      secondary: "#f0f4f5"
+      base_font: "Arial"
+    vertical_layout: fill
+    orientation: column
+---
+
+```{=html}
+<style>
+.navbar-inverse {
+  
+}
+.navbar-logo img {
+    position: absolute;
+    right: 0px;
+    max-height: 40px;
+    width= auto;
+}
+</style>
+```
+```{r setup, include=FALSE}
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse,lubridate,dplyr,flexdashboard,DT,ggplot2,plotly,crosstalk,webshot,knitr,htmltools,thematic)
+knitr::opts_chunk$set(echo = FALSE)
+
+
+# Install thematic and un-comment for themed static plots (i.e., ggplot2)
+thematic::thematic_rmd(
+  bg = "#FFFFFF",
+  fg = "auto",
+  accent = "#005EB8",
+  font = "Arial"
+)
+```
+
+```{css, echo=FALSE}
+.fluid-row {
+  font-size: 5.9vw;
+}
+.chart-shim {
+  overflow: auto;
+}
+```
+
+# Cover Page {data-icon="fa-solid fa-home" data-navmenu="Cover Page"}
+
+# subpage1 {#subpage1 data-icon="fa-regular fa-note-sticky" data-navmenu="Cover Page"}
+
+
+# subpage2 {#subpage2 data-icon="fa-regular fa-note-sticky" data-navmenu="Cover Page"}
+
+
+# subpage3 {#subpage3 data-icon="fa-regular fa-note-sticky" data-navmenu="Cover Page"}
+
+# Demo Stuff {#demo-stuff data-icon="fa-solid fa-chart-line"}
+
+
+
+# DT {#dt data-icon="fa-solid fa-magnifying-glass-chart" data-orientation=rows}

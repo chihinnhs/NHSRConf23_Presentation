@@ -16,25 +16,61 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 
--   About CADEAS: - what we do, who our stakeholders are, what kind of products we make
+-   **About CADEAS**
+    -   what we do, who our stakeholders are, what kind of products we make
 
 ## The challenges
 
--   to make a product that meets the needs of a wide range of stakeholders.
+-   **Excel heavy**
 
--   Something particularly technical?? [we don't have to do this but if Chi has an example of something we can put it in here- scatterplots??]
+    -   Historically consisted of 8 separate Excel based weekly reports
+    -   Expected to be 'publication ready' within a tight timescale (around 2.5 hours) 😰😰😰
 
--   Business continuity - quick turnaround time expected from stakeholders with limited experience with R (primarily familiar with using MS Office products such as Excel and Powerpoint)
+-   **Business continuity**
 
--   Technical challenges
+    -   A diverse range of stakeholders
+    -   Stakeholders mostly with limited exposure to R (primarily familiar with MS Office products such as Excel and PowerPoint)
 
-    -   No Shiny server hosting capacity (at least not yet)
-    -   
+## The challenges (continued)
+
+-   **Technical challenges**
+
+    -   Diverse geographical interests and policy driven requirements
+    -   Limited resource and time - no Shiny server hosting capacity (at least not yet)
+    -   Static PowerPoint slide style products were preferred over other innovative by some\
+        Limited version controls on R, R Packages and the existing R scripts - results not reproducible
 
 ## The solution
 
+-   A Rmarkdown dashboard that is interactive, reproducible and user friendly (backward compatibility)
+
 -   Tips on how to cater to a wide range of audiences e.g. graphs and data, very clear tips, extract in multiple formats
--   Work around for the technical challenge if included
+
+-   Workaround for the technical challenges
+
+    -   A combination use of R packages such as *flexdashboard*, *crosstalk*, *plotly*, *DT* and *flextable*
+    -   Minimal amount of Javascript and CSS to create an "illusion" of dependency dropdown 😵
+
+## The solution (continued)
+
+``` javascript
+$(document).ready(function() {
+    document.getElementById("PTL_TS_Primary_Selection").getElementsByClassName("selectized")[0].selectize.removeOption("");
+    document.getElementById("PTL_TS_Primary_Selection").getElementsByClassName("selectized")[0].selectize.setValue("National", false);
+    document.getElementById("PTL_TS_Prov_Selection").getElementsByClassName("selectized")[0].selectize.removeOption("");
+    document.getElementById("PTL_TS_Regional_Selection").getElementsByClassName("selectized")[0].selectize.removeOption("");
+});
+
+var ct_filter = new crosstalk.FilterHandle('PTL_TS');
+$('#PTL_TS_Primary_Selection').on("change", function() {
+
+if(document.getElementById("PTL_TS_Primary_Selection").getElementsByClassName("selectized")[0].value == "National"){
+      document.getElementById("PTL_TS_Prov_Selection").getElementsByClassName("selectized")[0].selectize.setValue(null, false);
+      document.getElementById("PTL_TS_Regional_Selection").getElementsByClassName("selectized")[0].selectize.setValue(null, false);
+      document.getElementById("PTL_TS_Regional_Selection").style.display = "none";
+      document.getElementById("PTL_TS_Prov_Selection").style.display = "none";
+} else if(...
+```
 
 ## Conclusion
 
