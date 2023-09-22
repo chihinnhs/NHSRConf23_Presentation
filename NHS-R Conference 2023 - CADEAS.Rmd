@@ -2,12 +2,13 @@
 title: "Dashboard Design for a Varied Customer Base" 
 subtitle: "NHS-R Community Conference 2023"
 author: "Cancer Alliance Data Evaluation and Analysis Service (CADEAS)"
-date: "`r Sys.Date()`"
+date: "2023-10-17"
 output: 
   ioslides_presentation: 
     widescreen: yes
     logo: ./NHS_logo/NHSE.jpg
     css: style.css
+    smaller: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -16,39 +17,55 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 
--   **About CADEAS**
-    -   what we do, who our stakeholders are, what kind of products we make
+-   **Who are we?** Cancer Alliance Data, Evidence and Analysis Service, part of the NHS England National Cancer Programme.
+
+-   **Who are our stakeholders?** Performance leads, policy makers and analysts.
+
+-   **What products do we produce?** A range of weekly and monthly regular reports and other ad-hoc pieces.
 
 ## The challenges
 
--   **Excel heavy**
+-   **Resource intensive**
 
     -   Historically consisted of 8 separate Excel based weekly reports
     -   Expected to be 'publication ready' within a tight timescale (around 2.5 hours) 😰😰😰
+    
+<center>
+```{r, fig.show="hold", out.width = "200px"}
+knitr::include_graphics("images/excel.gif", dpi = 20)
+```
+</center>
 
--   **Business continuity**
+-   **Business as usual**
 
     -   A diverse range of stakeholders
     -   Stakeholders mostly with limited exposure to R (primarily familiar with MS Office products such as Excel and PowerPoint)
+    
 
 ## The challenges (continued)
 
 -   **Technical challenges**
 
     -   Diverse geographical interests and policy driven requirements
-    -   Limited resource and time - no Shiny server hosting capacity (at least not yet)
-    -   Static PowerPoint slide style products were preferred over other innovative by some\
-        Limited version controls on R, R Packages and the existing R scripts - results not reproducible
+    -   Limited resource and time
+    -   No Shiny server hosting capacity (at least not yet)
+    -   Static PowerPoint slide style products were preferred over interactive dashboards by some
+    
+<center>
+```{r, fig.show="hold", out.width = "400px"}
+knitr::include_graphics("images/shiny.gif", dpi = 20)
+```
+</center>
 
 ## The solution
 
--   A Rmarkdown dashboard that is interactive, reproducible and user friendly (backward compatibility)
+-   A Rmarkdown dashboard that is interactive, reproducible and user friendly
 
--   Tips on how to cater to a wide range of audiences e.g. graphs and data, very clear tips, extract in multiple formats
+-   Built to cater to a wide range of audiences. Data  presented and downloadable in multiple formats (visuals, raw data etc), clear tips on how to use interactive elements and interpret the data.
 
 -   Workaround for the technical challenges
 
-    -   A combination use of R packages such as *flexdashboard*, *crosstalk*, *plotly*, *DT* and *flextable*
+    -   A combination of R packages such as *flexdashboard*, *crosstalk*, *plotly*, *DT* and *flextable*
     -   Minimal amount of Javascript and CSS to create an "illusion" of dependency dropdown 😵
 
 ## The solution (continued)
@@ -76,19 +93,30 @@ if(document.getElementById("PTL_TS_Primary_Selection").getElementsByClassName("s
 
 ## The solution (continued)
 
-```{r, fig.show="hold", fig.align='center', out.width="70%"}
-knitr::include_graphics("images/screenshot2.PNG", dpi = 100)
+<!-- ```{r, fig.show="hold", fig.align='center', out.width="70%"} -->
+<!-- knitr::include_graphics("images/screenshot2.PNG", dpi = 100) -->
+<!-- ``` -->
+
+<!-- ```{r, fig.show="hold"} -->
+<!-- knitr::include_graphics("images/screenshot1.PNG", dpi = 100) -->
+
+<!-- ``` -->
+
+<center>
+```{r}
+knitr::include_graphics("images/Capture2.png", dpi = 200)
 ```
-
-```{r, fig.show="hold"}
-knitr::include_graphics("images/screenshot1.PNG", dpi = 100)
-
-```
-
-
+</center>
 
 
 ## Conclusion
 
--   Summarise what we've said
--   Questions
+-   *Rmarkdown* in conjunction with *plotly*, *crosstalk* and *flexashboard* can be used as a workaround to develop interactive dashboards where shiny app hosting is not avaialble
+-   This allows data to be shared in multiple formats to best support a whide range of audiences and promotes self service.
+-   This in turn frees up analytical resource and enures analytical products are produced as efficiently as possible.
+
+<center>
+```{r, fig.show="hold", out.width = "400px"}
+knitr::include_graphics("images/question.gif", dpi = 200)
+```
+</center>
