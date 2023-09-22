@@ -4,9 +4,9 @@ subtitle: "NHS-R Community Conference 2023"
 author: "Cancer Alliance Data Evaluation and Analysis Service (CADEAS)"
 date: "`r Sys.Date()`"
 output: 
-  ioslides_presentation:
-    widescreen: true
-    logo: "./NHS_logo/NHSE.jpg"
+  ioslides_presentation: 
+    widescreen: yes
+    logo: ./NHS_logo/NHSE.jpg
     css: style.css
 ---
 
@@ -53,6 +53,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## The solution (continued)
 
+**Javascript** 😫
+
 ``` javascript
 $(document).ready(function() {
     document.getElementById("PTL_TS_Primary_Selection").getElementsByClassName("selectized")[0].selectize.removeOption("");
@@ -71,6 +73,20 @@ if(document.getElementById("PTL_TS_Primary_Selection").getElementsByClassName("s
       document.getElementById("PTL_TS_Prov_Selection").style.display = "none";
 } else if(...
 ```
+
+## The solution (continued)
+
+```{r, fig.show="hold", fig.align='center', out.width="70%"}
+knitr::include_graphics("images/screenshot2.PNG", dpi = 100)
+```
+
+```{r, fig.show="hold"}
+knitr::include_graphics("images/screenshot1.PNG", dpi = 100)
+
+```
+
+
+
 
 ## Conclusion
 
